@@ -1,7 +1,27 @@
-<%= @articles.each do |article| %>
-  <ul>
-    <li><%= link_to "#{article.name}", article_path(article) %></li>
-  </ul>
+<h1> Listing of all articles </h1>
 
-<% end %>
+<p>
+<%= link_to "Create new article", new_article_path %>
+</p>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+
+  <% @categories.each do |category| %>
+  <tr>
+    <td><%= category.title %></td>
+    <td><%= category.description %></td>
+    <td><%= link_to 'Edit', edit_article_path(category) %></td>
+    <td><%= link_to 'Show', article_path(category) %></td>
+
+  </tr>
+
+  <% end %>
+
+</table>
+
+
 
