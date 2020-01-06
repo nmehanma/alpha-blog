@@ -6,7 +6,7 @@
   <% @article.errors.full_messages.each do |msg| %>
     <li><%= msg %></li>
   <% end %>
-</ul
+</ul>
 <% end %>
 
 
@@ -15,18 +15,15 @@
   <p> 
     <%= f.label :title %> </br>
     <%= f.text_field :title %>
-
   </p>
 
   <p>
-
     <%= f.label :description %> </br>
     <%= f.text_area :description %>
 
   </p>
 
   <p>
-
     <%= f.submit %>
   </p>
 
