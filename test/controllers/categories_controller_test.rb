@@ -19,6 +19,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     get category_path(@category)
     assert_response :success
   end
+
 end
 
 
