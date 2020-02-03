@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
 
   def require_admin
     if !logged_in? || (logged_in? and !current_user.admin?)
-      flash[:danger] = "Only admins can perform this that action"
+      flash[:danger] = "Only admins can perform this action"
       redirect_to categories_path
     end
   end
