@@ -13,6 +13,11 @@
                   last updated: <%= time_ago_in_words(category.updated_at) %> ago</small>
             </div>
           </div>
+          <% if category.categories.any? %>
+            <p>Categories: <%= render category.categories %></p>
+
+          <% end %>
+
           <% if logged_in? && (current_user == category.user || current_user.admin?)%> 
             <div class= "article-actions">
               <%= link_to "Edit this article", edit_article_path(category), class: "btn btn-xs btn-primary" %> 
